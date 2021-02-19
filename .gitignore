@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode
+
+# test reports
+src/test/javascript/kitsune/jestapi/*.html
+src/test/javascript/fomc/jestapi/*.html
+src/test/javascript/birds/jestui/*.html
+src/test/javascript/birds/jestui/*.png
+src/test/javascript/birds/jestui/*.txt
+src/test/javascript/.idea/*
+
+# test evidence 
+videos/
+screenshots/
+downloaded-files/
+.

@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/${_REPO_ID}/IOF-B2B-POC-FOMCV2/dockerfiles/fomcv2/e2e/Dockerfile:latest', '.']
-images: ['gcr.io/${_REPO_ID}/IOF-B2B-POC-FOMCV2/dockerfiles/fomcv2/e2e/Dockerfile:latest']
+  args: ['build', '--tag=gcr.io/${PROJECT_ID}/IOF-B2B-POC-FOMCV2/dockerfiles/fomcv2/e2e/Dockerfile:latest', '.']
+images: ['gcr.io/${PROJECT_ID}/IOF-B2B-POC-FOMCV2/dockerfiles/fomcv2/e2e/Dockerfile:latest']

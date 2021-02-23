@@ -14,17 +14,12 @@ RUN apk add git
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
 WORKDIR /usr/app
-ARG username
-ARG password
-#RUN git clone -q https://${username}:${password}@github.com/smhernandezl/IOF-B2B-TA.git
-RUN git clone --single-branch --branch birds-ta/BIRD-634 https://${username}:${password}@github.com/smhernandezl/IOF-B2B-TA.git
-WORKDIR /usr/app/IOF-B2B-TA/src/test/javascript/birds/jestui
+RUN git clone https://github.com/anicka-cercado-telus/iof-b2b-poc-fomcv2.git
+WORKDIR /usr/app/IOF-B2B-POC-FOMCV2/src/test/javascript/fomcv2/jestui
 RUN npm install > /dev/null
 RUN echo -e "#!/bin/bash\n" \
         "rm -f *.html && " \
-        "npm run-script e2e; " \
-        "cp *.png /reports/ &&" \
-        "cp *.html /reports/" > script.sh
+        "npm test; " > script.sh
 RUN chmod 777 script.sh
 EXPOSE 8000
 CMD ["sh","script.sh"]

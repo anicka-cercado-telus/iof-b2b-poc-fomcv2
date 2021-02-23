@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fomcv2-ta:$SHORT_SHA', '-f', './dockerfiles/fomcv2/e2e', '.']
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/fomcv2-ta:$SHORT_SHA', '-f', './IOF-B2B-POC-FOMCV2/dockerfiles/fomcv2/e2e', '.']
   # push the base image to the GCP registry
 - id: push-base-image-to-gcr
   name: "gcr.io/cloud-builders/docker"

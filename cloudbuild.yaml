@@ -5,8 +5,6 @@ steps:
 - id: push-base-image-to-gcr
   name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/fomcv2-ta:$SHORT_SHA"]
-- name: 'gcr.io/cloud-builders/gsutil'
-  id: 'Copy manifest source file to Cloud Storage'
-  args: ['cp', '-Z', 'deployment.yaml', 'gs://kubernetes-manifests/deployment.yaml']
+
 
 
